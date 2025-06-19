@@ -29,7 +29,7 @@ async function twitchEmbed(pacemanInfo) {
     console.log('Loading new channel:', newChannel);
     currentChannel = newChannel;
     
-    var hostname = window.location.hostname || 'localhost';
+    var hostname = window.location.hostname || 'tchongas.red';
     var embedElement = document.getElementById('twitch-embed');
     
     // Clear the existing player if it exists
@@ -43,7 +43,7 @@ async function twitchEmbed(pacemanInfo) {
         width: '100%',
         height: '100%',
         channel: pacemanInfo.liveAccount,
-        parent: [hostname, 'localhost', '127.0.0.1'],
+        parent: [hostname, 'tchongas.red', '127.0.0.1'],
         autoplay: true
     };
 
