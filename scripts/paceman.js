@@ -56,7 +56,7 @@ async function getLivePlayers() {
         .some(e => e.eventId === 'rsg.enter_bastion' || e.eventId === 'rsg.loot_bastion');
       
       if (!hasBastionEvents) {
-        basePriority = 360; // Lower priority if no bastion interaction
+        basePriority = 300; // Lower priority if no bastion interaction
       }
     }
 
