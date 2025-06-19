@@ -1,3 +1,5 @@
+let counter = 0
+
 setInterval(async () => {
     await fetchInfo();
   }, 15 * 1000); // 15 seconds
@@ -9,6 +11,7 @@ async function fetchInfo() {
     console.log(bestPlayer);
     twitchEmbed(bestPlayer);
     changeOverlay(bestPlayer);
+    sidebarDisplayPaceman(livePlayers);
 }
 
 
@@ -43,9 +46,9 @@ async function twitchEmbed(pacemanInfo) {
         width: '100%',
         height: '100%',
         channel: pacemanInfo.liveAccount,
-        parent: [hostname, 'tchongas.red', '127.0.0.1'],
+        parent: [window.location.hostname],
         autoplay: true
-    };
+      };
 
     try {
         // Create new player instance
@@ -91,4 +94,45 @@ function changeOverlay(pacemanInfo) {
     document.getElementById('streamerName').innerHTML = pacemanInfo.liveAccount;
 }
 
+
+
+
+function sidebarDisplayPaceman(pacemanInfo) {
+    console.log("displayingSidebar");
+    const pacesDiv = document.getElementById('paces');
+    const children = pacesDiv.children;
+    for (let i = 0; i < children.length; i++) {
+        children[i].innerHTML = '<span class="stat-invisible">.</span>';
+    }
+    
+    const formattedInfo = pacemanInfo
+    for (let i = 0; i < formattedInfo.length; i++) {
+        const lastEvent = formattedInfo[i].eventList[formattedInfo[i].eventList.length - 1];
+        pacesDiv.children[i].innerHTML = '<span class="stat-value">' + formattedInfo[i].nickname + '</span><span class="stat-label">' + getFormattedText(lastEvent.eventId) + '</span></div>';
+        counter++
+        
+        if (counter > 6) {
+            while (counter > 6) {
+                pacesDiv.removeChild(pacesDiv.lastChild);
+                counter--;
+                
+            }
+        }
+    } 
+
+}
+
 fetchInfo();
+
+function getFormattedText(text) {
+    const dict = {
+        "rsg.enter_nether": "Nether",
+        "rsg.enter_bastion": "Bastion",
+        "rsg.enter_fortress": "Fortaleza",
+        "rsg.first_portal": "Primeiro Portal",
+        "rsg.second_portal": "Segundo Portal",
+        "rsg.enter_stronghold": "Stronghold",
+        "rsg.enter_end": "End",       
+    }
+    return dict[text] || text;
+}
