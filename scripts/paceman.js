@@ -30,7 +30,7 @@ async function getLivePlayers() {
   }
 
   const EVENT_BASE_PRIORITY = {
-    "rsg.credits": 750,
+    "rsg.credits": 600,
     "rsg.enter_end": 750,
     "rsg.enter_stronghold": 700,
     "rsg.second_portal": 650,
