@@ -40,7 +40,7 @@ async function getLivePlayers() {
     "rsg.obtain_crying_obsidian": 351,
     "rsg.loot_bastion": 350,
     "rsg.enter_bastion": 300,
-    "rsg.enter_nether": 100,
+    "rsg.enter_nether": 70,
     "rsg.obtain_iron_ingot": 50,
     "rsg.obtain_lava_bucket": 30,
     "rsg.obtain_iron_pickaxe": 10
