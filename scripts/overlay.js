@@ -123,7 +123,9 @@ function getFormattedText(text) {
         "rsg.first_portal": "Primeiro Portal",
         "rsg.second_portal": "Segundo Portal",
         "rsg.enter_stronghold": "Stronghold",
-        "rsg.enter_end": "End",       
+        "rsg.enter_end": "End",
+        "rsg.credits": "Zerou",
+
     }
     return dict[text] || text;
 }
