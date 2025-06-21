@@ -109,7 +109,7 @@ body, html {
 }
 
 .pb-list li {
-    padding: 5px 0;
+    padding: 10px 0px 5px;
     color: #ddd;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
@@ -158,7 +158,7 @@ body, html {
 /* Streamer Container */
 .streamer-container {
     position: absolute;
-    top: 77.6%;
+    top: 77.9%;
     left: 2.6%;
     max-width: 90%;
     overflow: hidden;
@@ -176,30 +176,35 @@ body, html {
 }
 
 .streamer-box {
+    font-family: 'minecraft', sans-serif;
     display: flex;
     align-items: center;
     background: rgba(51, 51, 51, 0.733);
     border: 3px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
-    padding: 15px 25px 12px;
+    padding: 0px 25px 0px;
     gap: 15px;
-    line-height: 1;
+
+}
+
+.streamer-box h2 {
+    margin-top: 30px;
 }
 
 .pb-box {
+    font-family: 'minecraft', sans-serif;
     display: flex;
     align-items: center;
     background: rgba(51, 51, 51, 0.733);
     border: 3px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
-    padding: 8px 15px 10px;
-    line-height: 1;
+    padding: 16px 25px 1px;
 }
 
-.streamer-emoji {
-    font-size: 1.2em;
-    margin-right: 5px;
-    line-height: 1;
+.streamer-emoji img {
+    margin-bottom: 0px;
+    width: 70px;
+    height: 70px;
 }
 
 .streamer-name {
@@ -209,7 +214,6 @@ body, html {
     color: #fff;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     letter-spacing: 0.5px;
-    line-height: 1;
 }
 
 .stream-stats {
@@ -265,3 +269,4 @@ body, html {
         opacity: 1;
     }
 }
+

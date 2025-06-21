@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'minecraft';
+    src: url('Minecraftia-Regular.ttf');
+}
+
+body {
+
+    line-height: 1.2; /* Base line height */
+}
+
+.pb-list li {
+    line-height: 1.2 !important;
+}
+
+.viewers {
+    line-height: 1.2 !important;
+}
+
+.pbTime {
+    color: #ffe469;
+}
+
+.pb-list li:nth-child(2) > span:nth-child(1),
+.pb-list li:nth-child(2) > span:nth-child(2),
+.pb-list li:nth-child(2) > span:nth-child(3) {
+    color: #fcce6c;
+}
+.pb-list li:nth-child(3) > span:nth-child(1),
+.pb-list li:nth-child(3) > span:nth-child(2),
+.pb-list li:nth-child(3) > span:nth-child(3) {
+    color: #a3c1cf;
+}
+.pb-list li:nth-child(4) > span:nth-child(1),
+.pb-list li:nth-child(4) > span:nth-child(2),
+.pb-list li:nth-child(4) > span:nth-child(3) {
+    color: #e0a882;
+}

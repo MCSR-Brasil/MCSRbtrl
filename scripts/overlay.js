@@ -106,7 +106,7 @@ function sidebarDisplayPaceman(pacemanInfo) {
     }
     
     const formattedInfo = pacemanInfo
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 5; i++) {
         const lastEvent = formattedInfo[i].eventList[formattedInfo[i].eventList.length - 1];
         pacesDiv.children[i].innerHTML = '<span class="stat-value">' + formattedInfo[i].nickname + '</span><span class="stat-label">' + getFormattedText(lastEvent.eventId) + '</span></div>';
     } 
