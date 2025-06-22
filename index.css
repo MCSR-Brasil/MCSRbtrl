@@ -109,6 +109,7 @@ body, html {
 }
 
 .pb-list li {
+    font-size: 1.4rem;
     padding: 10px 0px 5px;
     color: #ddd;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -126,6 +127,7 @@ body, html {
 }
 
 .run-stats {
+    font-size: 1.06rem;
     display: flex;
     flex-direction: column;
     gap: 8px;
