@@ -3,7 +3,7 @@ body, html {
     margin: 0;
     padding: 0;
     background: #000;
-    background-image: url('image.png');
+    background-image: url('fundo.png');
     background-size: cover;
     background-position: center;
     height: 100%;
