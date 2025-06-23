@@ -90,8 +90,10 @@ async function twitchEmbed(pacemanInfo) {
     }
 }
 
-function changeOverlay(pacemanInfo) {
+async function changeOverlay(pacemanInfo) {
     document.getElementById('streamerName').innerHTML = pacemanInfo.liveAccount;
+    const pb = await getPB(pacemanInfo.nickname);
+    document.getElementById('pb').innerHTML = 'PB: ' + pb;
 }
 
 
