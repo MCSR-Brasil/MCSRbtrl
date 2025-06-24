@@ -24,7 +24,7 @@ async function getPB(name) {
     const data = await fetchData(BR_RANKING_SPREADSHEET_ID, 'PBs');
     for (let i = 1; i < data.length; i++) {
         if (data[i][0] === name) {
-            console.log(data[i][1]);
+            console.log("PB of " + name + ": " + data[i][1]);
             return data[i][1];
         }
     }

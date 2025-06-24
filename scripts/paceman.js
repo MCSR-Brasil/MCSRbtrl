@@ -1,3 +1,32 @@
+// List of allowed live accounts (add or remove accounts as needed)
+const ALLOWED_LIVE_ACCOUNTS = [
+  'epik_runs',
+  'poc415',
+  'jap_aaa',
+  'tresdentess',
+  'BOOSTERRUNS',
+  'ykija',
+  'luc4szin_',
+  'reeiper',
+  'braahmaquente',
+  'batatowisk08',
+  'hangeamorzinho',
+  'psemtube',
+    'patoooooooooo_',
+  'TWRenatoGo',
+  'Petalight',
+  'shhy_y',
+  'darkk575',
+  'dertskapog',
+  '9jeffer',
+  'pedroferrer',
+  'sylvsunday',
+  'sanjinhu_',
+  'lusodudu',
+  'renatogoforgrind',
+  'avokarpio'
+];
+
 async function getLivePlayers() {
     try {
       const response = await fetch('https://paceman.gg/api/ars/liveruns?gameVersion=116l&liveOnly=false');
@@ -5,9 +34,14 @@ async function getLivePlayers() {
   
       const data = await response.json();
   
-      // Filter runs where liveAccount is not null
+      // Filter runs where liveAccount is not null and is in the allowed list
       const livePlayers = data
-        .filter(run => run.user.liveAccount !== null)
+        .filter(run => {
+          const liveAccount = run.user?.liveAccount?.toLowerCase();
+          return liveAccount && ALLOWED_LIVE_ACCOUNTS.some(
+            allowed => allowed.toLowerCase() === liveAccount
+          );
+        })
         .map(run => ({
           nickname: run.nickname,
           liveAccount: run.user.liveAccount,
