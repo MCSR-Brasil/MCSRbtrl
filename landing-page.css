@@ -1,0 +1,45 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #ffffff;
+    background-color: #050114;
+}
+h1 {
+    color: #cecece; /* Twitch purple */
+    text-align: center;
+    margin-bottom: 30px;
+}
+.container {
+    background-color: rgb(14, 12, 32);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.cta-button {
+    display: inline-block;
+    background-color: #8c42fc;
+    color: rgb(216, 216, 216);
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+.cta-button:hover {
+    background-color: #772ce8;
+}
+.features {
+    margin: 30px 0;
+}
+.feature {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+}
+.center {
+    text-align: center;
+}
