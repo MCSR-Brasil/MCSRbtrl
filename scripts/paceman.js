@@ -24,7 +24,8 @@ const ALLOWED_LIVE_ACCOUNTS = [
   'sanjinhu_',
   'lusodudu',
   'renatogoforgrind',
-  'avokarpio'
+  'avokarpio',
+  'luigilander_'
 ];
 
 async function getLivePlayers() {
