@@ -30,5 +30,3 @@ async function getPB(name) {
     }
     return null;
 }
-
-getPB('epik_runs');

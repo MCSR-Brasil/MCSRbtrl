@@ -1,4 +1,5 @@
-let counter = 0
+let counter = 0;
+let currentPlayer = null;
 
 setInterval(async () => {
     await fetchInfo();
@@ -9,6 +10,7 @@ setInterval(async () => {
 async function fetchInfo() {
     const livePlayers = await getLivePlayers();
     const bestPlayer = getBestLivePlayer(livePlayers);
+    fetchTopTen(BR_RANKING_SPREADSHEET_ID, 'ranking');
     console.log("current best player:", bestPlayer);
     
     // Only update if we have a valid best player
@@ -20,6 +22,9 @@ async function fetchInfo() {
     if (currentPlayer) {
         twitchEmbed(currentPlayer);
         changeOverlay(currentPlayer);
+        
+    } else {
+        console.log("No current player");
     }
     
     sidebarDisplayPaceman(livePlayers);

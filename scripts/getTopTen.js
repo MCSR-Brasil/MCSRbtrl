@@ -1,7 +1,7 @@
 const API_KEY = 'AIzaSyAgRJh3hMNn84hWJYnwoXhq3Pw_Ew1yyrw';
 const BR_RANKING_SPREADSHEET_ID = '1ukqKAgvEGuR_QrfH29RW15g30Ich6Q2HQWRi2zRB1sw';
 
-async function fetchData(spreadsheetId, range) {
+async function fetchTopTen(spreadsheetId, range) {
     const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}?alt=json&key=${API_KEY}`;
     try {
         const response = await fetch(url);
@@ -32,4 +32,4 @@ function renderTopTen(data) {
     }
 }
 
-fetchData(BR_RANKING_SPREADSHEET_ID, 'ranking');
+fetchTopTen(BR_RANKING_SPREADSHEET_ID, 'ranking');
